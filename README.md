@@ -374,7 +374,7 @@ public static void deleteFace(long faceId, final DeleteListener deleteListener)
 
 It accepts face id as an argument to delete the face and the associated bobble heads.
 
-## 19. deleteBobbleHead
+## 20. deleteBobbleHead
  ```
 public static void deleteBobbleHead(long bobbleHeadId, final DeleteListener deleteListener) 
  ```
