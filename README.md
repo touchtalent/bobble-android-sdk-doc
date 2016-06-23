@@ -35,7 +35,7 @@ Stickers created with on the fly text
 Add this in your build.gradle`
 
 ```
-compile 'com.bobble.android:bobble-android-sdk:0.1.0'
+compile 'com.bobble.android:bobble-android-sdk:0.2.0'
 ```
 
 Then you are ready to use bobbleSDK
@@ -46,6 +46,9 @@ Then initialize it in onCreate() Method of application class, :
 
 ```
 BobbleSDK.initialize(getApplicationContext(), CLIENT_ID);
+
+// If you do not have CLIENT_ID , email us to get it at : android@bobbleapp.me
+
  ```
  
  Initialize the SDK before executing any other operations,
@@ -348,10 +351,32 @@ To get pagewise sticker categories list. Arguments are :-
 public static void downloadStickerCategoryForId(long id, final DownloadListener downloadListener) 
  ```
 
-It accepts stickercategory id as an argument to download the pack.
+It accepts sticker category id as an argument to download the pack.
 
+## 17. deleteSticker
+ ```
+public static void deleteSticker(long stickerId, final DeleteListener deleteListener) 
+ ```
 
+It accepts sticker id as an argument to delete the sticker.
 
+## 18. deleteStickerCategory
+ ```
+public static void deleteStickerCategory(long stickerCategoryId, final DeleteListener deleteListener) 
+ ```
 
+It accepts sticker category id as an argument to delete the sticker category.
 
+## 19. deleteFace
+ ```
+public static void deleteFace(long faceId, final DeleteListener deleteListener) 
+ ```
 
+It accepts face id as an argument to delete the face and the associated bobble heads.
+
+## 19. deleteBobbleHead
+ ```
+public static void deleteFace(long faceId, final DeleteListener deleteListener) 
+ ```
+
+It accepts bobble head id as an argument to delete the bobble head.
