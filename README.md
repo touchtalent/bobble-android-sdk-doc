@@ -233,15 +233,9 @@ public static void shutDown()
 Method to close bobble SDK instance.
 
 
-## 4. generateAccessToken
- ```
-public static void generateAccessToken()
- ```
-method to generate access token for validation. 
-
 Precondition:- SDK should be enabled
 
-## 5. checkImage
+## 4. checkImage
  ```
 public static void checkImage(Bitmap bitmap, final FaceDetectionListener faceDetectionListener)
  ```
@@ -257,7 +251,7 @@ First argument can be image or image path.(Path cannot be Null)
 Preconditions - SDK should be enabled and Bobble should be ready.
 
 
-## 6. bobblify
+## 5. bobblify
  ```
 public static void bobblify(String path, String gender, BobblificationListener bobblificationListener)
  ```
@@ -271,7 +265,7 @@ First argument is image or image path. Second argument “gender” can have 2 v
 
 Preconditions - SDK should be enabled. Bobble should be ready. Image/Path and Gender cannot be null.
 
-## 7. createSticker
+## 6. createSticker
  ```
 public static void createSticker(final BobbleHead bobbleHead, final Sticker sticker, final StickerCreationListener stickerCreationListener)
  ```
@@ -280,7 +274,7 @@ This method is for creating stickers. The first argument is for bobblified head 
 
 Precondition - SDK should be enabled
 
-## 8. createStickerOnTheFly
+## 7. createStickerOnTheFly
  ```
 public static void createStickerOnTheFly(final BobbleHead bobbleHead, final Sticker sticker, String text, final StickerCreationListener stickerCreationListener) 
  ```
@@ -290,28 +284,28 @@ First argument accepts bobblified head, second argument is for selected sticker,
 
 Precondition - SDK should be enabled
 
-## 9.  getAllFaces
+## 8.  getAllFaces
  ```
 public static List<Face> getAllFaces()
  ```
  
 To get all faces. This will return a list of faces. 
 
-## 10. getAllBobbleHeads
+## 9. getAllBobbleHeads
  ```
 public static List<BobbleHead> getAllBobbleHeads()
  ```
  
 To get a list of all bobblified heads for all faces
 
-## 11. getBobbleHeadForFaceId
+## 10. getBobbleHeadForFaceId
  ```
 public static List<BobbleHead> getBobbleHeadForFaceId(final long faceId)
  ```
 To get list of all bobblified heads for a particular faceId
 
 
-## 12.  getPreferredBobbleHeadForFaceId
+## 11.  getPreferredBobbleHeadForFaceId
  ```
 public static BobbleHead getPreferredBobbleHeadForFaceId(final long faceId) 
  ```
@@ -320,7 +314,7 @@ This will return the preferred head for a particular faceId, the priority is set
 Note:  SDK must be enabled and headList should not be null or zero
 
 
-## 13. getAllStickerCategory
+## 12. getAllStickerCategory
  ```
 public static List<StickerCategory> getAllStickerCategory()
  ```
@@ -328,14 +322,14 @@ public static List<StickerCategory> getAllStickerCategory()
 To get list of all the sticker packs
 
 
-## 14. getStickerListForStickerCategoryId
+## 13. getStickerListForStickerCategoryId
  ```
 public static List<Sticker> getStickerListForStickerCategoryId(final long stickerCategoryId, final BobbleHead bobbleHead)
  ```
 To fetch all sticker for a particular stickercategory id. It accepts two arguments, first is stickercategoryid which is unique id for each stickercategory, second is bobblified head.
 
 
-## 15.  getApiStickerCategoryList
+## 14.  getApiStickerCategoryList
 ```
 public static void getApiStickerCategoryList(int limit, int page, final ApiStickerCategoryListListener apiStickerCategoryListListener) 
  ```
@@ -346,37 +340,40 @@ To get pagewise sticker categories list. Arguments are :-
 
 2. page to set no. of pages
 
-## 16. downloadStickerCategoryForId
+## 15. downloadStickerCategoryForId
  ```
 public static void downloadStickerCategoryForId(long id, final DownloadListener downloadListener) 
  ```
 
 It accepts sticker category id as an argument to download the pack.
 
-## 17. deleteSticker
+## 16. deleteSticker
  ```
 public static void deleteSticker(long stickerId, final DeleteListener deleteListener) 
  ```
 
 It accepts sticker id as an argument to delete the sticker.
 
-## 18. deleteStickerCategory
+## 17. deleteStickerCategory
  ```
 public static void deleteStickerCategory(long stickerCategoryId, final DeleteListener deleteListener) 
  ```
 
 It accepts sticker category id as an argument to delete the sticker category.
 
-## 19. deleteFace
+## 18. deleteFace
  ```
 public static void deleteFace(long faceId, final DeleteListener deleteListener) 
  ```
 
 It accepts face id as an argument to delete the face and the associated bobble heads.
 
-## 20. deleteBobbleHead
+## 19. deleteBobbleHead
  ```
 public static void deleteBobbleHead(long bobbleHeadId, final DeleteListener deleteListener) 
  ```
 
 It accepts bobble head id as an argument to delete the bobble head.
+
+
+
