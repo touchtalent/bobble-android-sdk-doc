@@ -35,7 +35,7 @@ Stickers created with on the fly text
 Add this in your build.gradle`
 
 ```
-compile 'com.bobble.android:bobble-android-sdk:0.2.0'
+compile 'com.bobble.android:bobble-android-sdk:0.3.0'
 ```
 
 Then you are ready to use bobbleSDK
@@ -51,6 +51,15 @@ BobbleSDK.initialize(getApplicationContext(), CLIENT_ID);
 
  ```
  
+ ```
+If you are using proguard, then add this rule in proguard-project.txt
+ 
+-dontwarn okio.**
+
+-keep class me.bobbleapp.sdk.model.** { *; }
+ 
+  ```
+  
  Initialize the SDK before executing any other operations,
  
  Now you call BobbleSDK methods:
@@ -375,5 +384,17 @@ public static void deleteBobbleHead(long bobbleHeadId, final DeleteListener dele
 
 It accepts bobble head id as an argument to delete the bobble head.
 
+## 20. seed
+ ```
+public static void seed(int rawResId, final SeedListener seedListener) 
+ ```
+
+It accepts raw resource id as an argument.
+
+ ```
+public static void seed(String zipPath, final SeedListener seedListener) 
+ ```
+
+It accepts zip path as an argument.
 
 
