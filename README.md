@@ -337,8 +337,14 @@ public static List<Sticker> getStickerListForStickerCategoryId(final long sticke
  ```
 To fetch all sticker for a particular stickercategory id. It accepts two arguments, first is stickercategoryid which is unique id for each stickercategory, second is bobblified head.
 
+## 14. getStickerList
+ ```
+public static List<Sticker> getStickerList(final BobbleHead bobbleHead)
+ ```
+To fetch all sticker corresponding to a bobbleHead.
 
-## 14.  getApiStickerCategoryList
+
+## 15.  getApiStickerCategoryList
 ```
 public static void getApiStickerCategoryList(int limit, int page, final ApiStickerCategoryListListener apiStickerCategoryListListener) 
  ```
@@ -349,42 +355,42 @@ To get pagewise sticker categories list. Arguments are :-
 
 2. page to set no. of pages
 
-## 15. downloadStickerCategoryForId
+## 16. downloadStickerCategoryForId
  ```
 public static void downloadStickerCategoryForId(long id, final DownloadListener downloadListener) 
  ```
 
 It accepts sticker category id as an argument to download the pack.
 
-## 16. deleteSticker
+## 17. deleteSticker
  ```
 public static void deleteSticker(long stickerId, final DeleteListener deleteListener) 
  ```
 
 It accepts sticker id as an argument to delete the sticker.
 
-## 17. deleteStickerCategory
+## 18. deleteStickerCategory
  ```
 public static void deleteStickerCategory(long stickerCategoryId, final DeleteListener deleteListener) 
  ```
 
 It accepts sticker category id as an argument to delete the sticker category.
 
-## 18. deleteFace
+## 19. deleteFace
  ```
 public static void deleteFace(long faceId, final DeleteListener deleteListener) 
  ```
 
 It accepts face id as an argument to delete the face and the associated bobble heads.
 
-## 19. deleteBobbleHead
+## 20. deleteBobbleHead
  ```
 public static void deleteBobbleHead(long bobbleHeadId, final DeleteListener deleteListener) 
  ```
 
 It accepts bobble head id as an argument to delete the bobble head.
 
-## 20. seed
+## 21. seed
  ```
 public static void seed(int rawResId, final SeedListener seedListener) 
  ```
