@@ -56,12 +56,98 @@ After OnBoarding completion,either it returns onBobbleOnBoardingSuccess(bobbleHe
 
 ### Adding BobbleButton in your UI:
 ```xml
-<me.bobbleapp.sdk.BobbleButton
+<me.bobbleapp.sdk.widget.BobbleButton
 android:id="@+id/bobbleButton"
 android:layout_width="48dp"
 android:layout_height="48dp"
 />
 ```          
+In this way BobbleButton can be included in any UI
+
+### Adding BobbleStickerView in your UI:
+```xml
+<me.bobbleapp.sdk.widget.BobbleStickerView
+android:id="@+id/bobbleStickerView"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:gif="true"
+app:font="false"
+app:expression="true"
+/>
+```
+These parameters can be also changed programmatically.
+
+If you are using GIF, Font, you need to compile another dependencies like this
+```groovy
+compile 'com.bobble.android:bobble-android-sdk-gif:x.y.z'
+compile 'com.bobble.android:bobble-android-sdk-font:x.y.z'
+```
+
+At the time of including BobbleStickerView, you need to implement onTapListener;
+```java
+// registering it
+bobbleStickerView.init(this);
+// This will implement the following methods.
+public void onStickerTap(Uri uri){
+
+}
+public void onGifTap(Uri uri){
+
+}
+```
+
+### Adding BobbleSuggestionView in your UI:
+```xml
+<me.bobbleapp.sdk.widget.BobbleSuggestionView
+android:id="@+id/bobbleSuggestionView"
+android:layout_width="wrap_content"
+android:layout_height="100dp"
+/>
+```
+
+Following method are available on this view :
+```java
+bobbleSuggestionView.update(yourInputText);
+bobbleSuggestionView.show();
+bobbleSuggestionView.hide();
+```
+
+### Getting CoolBobbleText:
+```java
+String text = BobbleSDK.getCoolBobbleText(yourInputText);
+```
+
+### Getting best suggested sticker on the basis of yourInputText at any time:
+```java
+Bitmap bitmap = BobbleSDK.getSticker(yourInputText,headId);
+```
+
+### Getting Personalized Notification Data:
+```java
+NotificationData notificationData = BobbleSDK.getStickerPackDetails(headId);
+```
+NotificationData includes following:
+```java
+public class NotificationData{
+  private String smallText;
+  private String largeText;
+  private String link;
+  private Bitmap image;
+}
+```
+
+### Showing BobbleStickerPreview;
+You need to get and load BobbleStickerPreviewFragment like this;
+```java
+Fragment fragment = new BobbleStickerPreviewFragment(stickerUri);
+```
+
+### ShutDown BobbleSDK:
+```java
+BobbleSDK.shutDown()
+```
+
+
 
 
 
