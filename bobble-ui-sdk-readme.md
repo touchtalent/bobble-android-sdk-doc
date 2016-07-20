@@ -75,7 +75,7 @@ app:font="false"
 app:expression="true"
 />
 ```
-These parameters can be also changed programmatically.
+These parameters can be changed programmatically.
 
 If you are using GIF, Font, you need to compile another dependencies like this
 ```groovy
