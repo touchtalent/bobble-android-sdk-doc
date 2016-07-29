@@ -54,7 +54,14 @@ If you are using proguard, then add this rule in proguard-project.txt
 
 ```
 -dontwarn okio.**
+
 -keep class me.bobbleapp.sdk.model.** { *; }
+
+-keepclassmembers class * extends de.greenrobot.dao.AbstractDao {
+    public static java.lang.String TABLENAME;
+}
+
+-keep class **$Properties
 ```
 
 
